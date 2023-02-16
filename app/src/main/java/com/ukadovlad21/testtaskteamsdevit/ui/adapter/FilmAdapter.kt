@@ -1,5 +1,6 @@
 package com.ukadovlad21.testtaskteamsdevit.ui.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ukadovlad21.testtaskteamsdevit.R
 import com.ukadovlad21.testtaskteamsdevit.models.ItemDataModel
+import com.ukadovlad21.testtaskteamsdevit.ui.activity.MainActivity
 import com.ukadovlad21.testtaskteamsdevit.utils.Constant.Companion.IMAGE_BASE_URL
 import kotlinx.android.synthetic.main.recycler_view_item.view.*
 
@@ -57,5 +59,27 @@ class FilmItemHolder(container: ViewGroup) : RecyclerView.ViewHolder(
                 .into(itemView.ivItemImage)
 
         }
+        itemView.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(NAME, item.name)
+            bundle.putString(FIRST_AIR_DATE, item.firstAirDate)
+            bundle.putString(POSTER_PATH, item.posterPath)
+            bundle.putString(VOTE_AVERAGE, item.voteAverage)
+            bundle.putString(VOTE_COUNT, item.voteCount)
+            bundle.putString(ORIGINAL_NAME, item.originalName)
+            bundle.putString(OVERVIEW, item.overview)
+            (itemView.context as MainActivity).navController
+                .navigate(R.id.action_mainFragment_to_detailsFragment, args = bundle)
+        }
+    }
+
+    companion object {
+        const val NAME = "name"
+        const val FIRST_AIR_DATE = "firstAirDate"
+        const val POSTER_PATH = "posterPath"
+        const val VOTE_AVERAGE = "voteAverage"
+        const val VOTE_COUNT = "voteCount"
+        const val ORIGINAL_NAME = "originalName"
+        const val OVERVIEW = "overview"
     }
 }

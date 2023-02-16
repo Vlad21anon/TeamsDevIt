@@ -35,10 +35,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                     hideLoadingBar()
                     response.data.let { responses ->
                         val listOfItem = ResponseMapper().map(responses)
-                        Log.d("TAG", listOfItem.toString())
-                        Log.d("A", filmAdapter.currentList.toString())
                         filmAdapter.submitList(listOfItem)
-                        Log.d("A", filmAdapter.currentList.toString())
 
                     }
                 }
