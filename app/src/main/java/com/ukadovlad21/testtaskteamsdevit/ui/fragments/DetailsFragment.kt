@@ -1,11 +1,10 @@
-package com.ukadovlad21.testtaskteamsdevit
+package com.ukadovlad21.testtaskteamsdevit.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.ukadovlad21.testtaskteamsdevit.R
 import com.ukadovlad21.testtaskteamsdevit.ui.adapter.FilmItemHolder.Companion.FIRST_AIR_DATE
 import com.ukadovlad21.testtaskteamsdevit.ui.adapter.FilmItemHolder.Companion.NAME
 import com.ukadovlad21.testtaskteamsdevit.ui.adapter.FilmItemHolder.Companion.ORIGINAL_NAME
@@ -15,8 +14,6 @@ import com.ukadovlad21.testtaskteamsdevit.ui.adapter.FilmItemHolder.Companion.VO
 import com.ukadovlad21.testtaskteamsdevit.ui.adapter.FilmItemHolder.Companion.VOTE_COUNT
 import com.ukadovlad21.testtaskteamsdevit.utils.Constant
 import kotlinx.android.synthetic.main.fragment_details.*
-import kotlinx.android.synthetic.main.recycler_view_item.*
-import kotlinx.android.synthetic.main.recycler_view_item.view.*
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 

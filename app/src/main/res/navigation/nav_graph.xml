@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.ukadovlad21.testtaskteamsdevit.DetailsFragment"
+        android:name="com.ukadovlad21.testtaskteamsdevit.ui.fragments.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" >
         <action

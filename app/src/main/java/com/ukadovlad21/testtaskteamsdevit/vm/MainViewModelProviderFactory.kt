@@ -1,11 +1,10 @@
-package com.ukadovlad21.testtaskteamsdevit
+package com.ukadovlad21.testtaskteamsdevit.vm
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.ukadovlad21.testtaskteamsdevit.data.repository.MainRepository
 import com.ukadovlad21.testtaskteamsdevit.usecase.CheckInternetStateUseCase
-import com.ukadovlad21.testtaskteamsdevit.vm.MainViewModel
 
 @Suppress("UNCHECKED_CAST")
 class MainViewModelProviderFactory(

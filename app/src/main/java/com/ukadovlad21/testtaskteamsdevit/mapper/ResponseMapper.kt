@@ -1,4 +1,4 @@
-package com.ukadovlad21.testtaskteamsdevit
+package com.ukadovlad21.testtaskteamsdevit.mapper
 
 import com.ukadovlad21.testtaskteamsdevit.models.DataModel
 import com.ukadovlad21.testtaskteamsdevit.models.ItemDataModel

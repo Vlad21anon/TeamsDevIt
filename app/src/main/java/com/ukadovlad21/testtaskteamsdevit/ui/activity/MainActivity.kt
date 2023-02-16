@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.ukadovlad21.testtaskteamsdevit.MainViewModelProviderFactory
+import com.ukadovlad21.testtaskteamsdevit.vm.MainViewModelProviderFactory
 import com.ukadovlad21.testtaskteamsdevit.R
 import com.ukadovlad21.testtaskteamsdevit.data.repository.MainRepository
 import com.ukadovlad21.testtaskteamsdevit.vm.MainViewModel

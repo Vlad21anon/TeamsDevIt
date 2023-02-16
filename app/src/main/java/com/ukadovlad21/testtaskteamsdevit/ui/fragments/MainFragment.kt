@@ -1,15 +1,12 @@
 package com.ukadovlad21.testtaskteamsdevit.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.ukadovlad21.testtaskteamsdevit.R
-import com.ukadovlad21.testtaskteamsdevit.ResponseMapper
+import com.ukadovlad21.testtaskteamsdevit.mapper.ResponseMapper
 import com.ukadovlad21.testtaskteamsdevit.ui.activity.MainActivity
 import com.ukadovlad21.testtaskteamsdevit.ui.adapter.FilmAdapter
 import com.ukadovlad21.testtaskteamsdevit.utils.Resource
