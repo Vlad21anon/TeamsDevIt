@@ -38,12 +38,12 @@ class MainViewModel(
             if (checkInternetStateUseCase.isInternetAvailable()) {
                 liveData.postValue(handleResponse(getResponse()))
             } else {
-                liveData.postValue(Resource.Error("No internet connection"))
+                liveData.postValue(Resource.Error)
             }
         } catch (t: Throwable) {
             when (t) {
-                is IOException -> liveData.postValue(Resource.Error("Network failure"))
-                else -> liveData.postValue(Resource.Error("Conversion Error: $t"))
+                is IOException -> liveData.postValue(Resource.Error)
+                else -> liveData.postValue(Resource.Error)
             }
         }
     }
@@ -55,7 +55,7 @@ class MainViewModel(
             }
         }
 
-        return Resource.Error(response.message())
+        return Resource.Error
     }
 
 

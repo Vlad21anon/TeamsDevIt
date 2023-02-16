@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ukadovlad21.testtaskteamsdevit.fragments.MainFragment"
+        android:name="com.ukadovlad21.testtaskteamsdevit.ui.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 </navigation>

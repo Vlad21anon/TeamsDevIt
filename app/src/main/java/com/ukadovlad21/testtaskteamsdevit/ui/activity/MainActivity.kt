@@ -1,4 +1,4 @@
-package com.ukadovlad21.testtaskteamsdevit.activity
+package com.ukadovlad21.testtaskteamsdevit.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
