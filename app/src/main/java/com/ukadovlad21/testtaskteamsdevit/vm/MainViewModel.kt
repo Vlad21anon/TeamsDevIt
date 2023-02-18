@@ -13,51 +13,19 @@ import java.io.IOException
 
 class MainViewModel(
     private val repo: MainRepository,
-    private val checkInternetStateUseCase: CheckInternetStateUseCase,
 ) : ViewModel() {
-
 
     private val liveData: MutableLiveData<Resource<DataModel>> = MutableLiveData()
 
     fun getAllByPage(page: Int): MutableLiveData<Resource<DataModel>> {
         viewModelScope.launch {
-            call(liveData) {
+            repo.call(liveData) {
                 repo.getListOfAllModelsByPage(page)
             }
         }
 
         return liveData
     }
-
-    private suspend fun <T> call(
-        liveData: MutableLiveData<Resource<T>>,
-        getResponse: suspend () -> Response<T>,
-    ) {
-        liveData.postValue(Resource.Loading)
-        try {
-            if (checkInternetStateUseCase.isInternetAvailable()) {
-                liveData.postValue(handleResponse(getResponse()))
-            } else {
-                liveData.postValue(Resource.Error)
-            }
-        } catch (t: Throwable) {
-            when (t) {
-                is IOException -> liveData.postValue(Resource.Error)
-                else -> liveData.postValue(Resource.Error)
-            }
-        }
-    }
-
-    private fun <T> handleResponse(response: Response<T>): Resource<T> {
-        if (response.isSuccessful) {
-            response.body()?.let { currencyResponse ->
-                return Resource.Success(currencyResponse)
-            }
-        }
-
-        return Resource.Error
-    }
-
 
 }
 

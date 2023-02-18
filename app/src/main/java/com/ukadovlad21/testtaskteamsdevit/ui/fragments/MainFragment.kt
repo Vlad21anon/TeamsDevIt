@@ -37,7 +37,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                     }
                 }
                 is Resource.Error -> {
-                    Toast.makeText(activity, "An error occurred", Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity, response.message, Toast.LENGTH_LONG).show()
 
                 }
                 is Resource.Loading -> showLoadingBar()

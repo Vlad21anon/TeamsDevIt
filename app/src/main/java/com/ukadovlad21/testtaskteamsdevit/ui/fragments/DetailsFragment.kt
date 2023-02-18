@@ -17,13 +17,13 @@ import kotlinx.android.synthetic.main.fragment_details.*
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 
-    val name by lazy { this.arguments?.get(NAME).toString() }
-    val firstAirDate by lazy { this.arguments?.get(FIRST_AIR_DATE).toString() }
-    val posterPath by lazy { this.arguments?.get(POSTER_PATH).toString() }
-    val voteAverage by lazy { this.arguments?.get(VOTE_AVERAGE).toString() }
-    val voteCount by lazy { this.arguments?.get(VOTE_COUNT).toString() }
-    val originalName by lazy { this.arguments?.get(ORIGINAL_NAME).toString() }
-    val overview by lazy {
+    private val name by lazy { this.arguments?.get(NAME).toString() }
+    private val firstAirDate by lazy { this.arguments?.get(FIRST_AIR_DATE).toString() }
+    private val posterPath by lazy { this.arguments?.get(POSTER_PATH).toString() }
+    private val voteAverage by lazy { this.arguments?.get(VOTE_AVERAGE).toString() }
+    private val voteCount by lazy { this.arguments?.get(VOTE_COUNT).toString() }
+    private val originalName by lazy { this.arguments?.get(ORIGINAL_NAME).toString() }
+    private val overview by lazy {
         if (this.arguments?.get(OVERVIEW).toString().isEmpty()) "nothing..."
         else this.arguments?.get(OVERVIEW).toString()
     }

@@ -8,15 +8,18 @@ import androidx.navigation.Navigation
 import com.ukadovlad21.testtaskteamsdevit.vm.MainViewModelProviderFactory
 import com.ukadovlad21.testtaskteamsdevit.R
 import com.ukadovlad21.testtaskteamsdevit.data.repository.MainRepository
+import com.ukadovlad21.testtaskteamsdevit.usecase.CheckInternetStateUseCase
 import com.ukadovlad21.testtaskteamsdevit.vm.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var navController: NavController
 
-    private var mainRepository = MainRepository()
+    private val mainRepository by lazy {
+        MainRepository(CheckInternetStateUseCase(application))
+    }
     val mainViewModel: MainViewModel by viewModels {
-        MainViewModelProviderFactory(application, mainRepository)
+        MainViewModelProviderFactory(mainRepository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,5 +29,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
 
 
